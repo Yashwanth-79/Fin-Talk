@@ -76,9 +76,10 @@ def clean_news_data(raw_news_data):
     return cleaned_data
 
 # --------------------------- NLP MODELS ---------------------------
-ner_pipe = pipeline("token-classification", model="dbmdz/bert-large-cased-finetuned-conll03-english")
-sentiment_pipe = pipeline("sentiment-analysis", model="ProsusAI/finbert")
-qa_pipe = pipeline("question-answering", model="mrm8488/bert-tiny-finetuned-squadv2")
+ner_pipe = pipeline("token-classification", model="dbmdz/bert-base-cased-finetuned-conll03-english")
+sentiment_pipe = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
+qa_pipe = pipeline("question-answering", model="distilbert-base-cased-distilled-squad")
+
 
 def extract_entities_hf(text: str) -> str:
     entities = ner_pipe(text)
@@ -403,3 +404,4 @@ def serve_static(path):
 # --------------------------- MAIN EXECUTION ---------------------------
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
+    
