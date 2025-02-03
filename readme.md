@@ -1,6 +1,7 @@
 # Fin-Talk: AI-Powered Financial Assistant
 
 Live : https://fintalk-client-oqfcyuzu4-yashwanth-79s-projects.vercel.app/
+
 Demo : https://youtu.be/LkhYakvjRBQ?feature=shared
 
 ## 📌 Project Overview
